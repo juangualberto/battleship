@@ -5,16 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BattleShip</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div>
-        <h1>BattleShip</h1>
-        <h2>Lenguajes de Marcas y SGI</h2>
-        <br>
-        <p>Bienvenido a esta aplicación.</p>
-        <p>Práctica del módulo de Desarrollo de 
-            Aplicaciones Multiplataforma.</p>
+    <div class="container">
+        <header></header>
+
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">BattleShip</a>
+            <button class="navbar-toggler" type="button" 
+                    data-toggle="collapse" data-target="#mi_menu" 
+                    aria-controls="mi_menu" aria-expanded="true" 
+                    aria-label="Abrir menú">
+                  <span class="navbar-toggler-icon"></span>
+            </button>
             
+            <div class="navbar-collapse collapse show" id="mi_menu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" 
+                            href="#" 
+                            id="dropdown01" data-toggle="dropdown" 
+                            aria-haspopup="true" 
+                            aria-expanded="false">Nueva partida</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="#">Fácil</a>
+                            <a class="dropdown-item" href="#">Medio</a>
+                            <a class="dropdown-item" href="#">Difícil</a>
+                        </div>                    
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"> Puntuaciones </a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" 
+                            href="#" 
+                            id="dropdown02" data-toggle="dropdown" 
+                            aria-haspopup="true" 
+                            aria-expanded="false">Ayuda</a>  
+                            <div class="dropdown-menu" aria-labelledby="dropdown02">
+                                <a class="dropdown-item" href="#">Ayuda del programa</a>
+                                <a class="dropdown-item" href="#">Acerca de...</a>
+                            </div>               
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="panel_inicial">
+            <h1>BattleShip</h1>
+            <h2>Lenguajes de Marcas y SGI</h2>
+            <br>
+            <p>Bienvenido a esta aplicación.</p>
+            <p>Práctica del módulo de <span style="background-color:#ee3;">Desarrollo de 
+                Aplicaciones Multiplataforma.</span></p>
+        </div>
+
+        <div id="panel_partida" hidden>
+            2
+        </div>
+
+        <div id="panel_puntuaciones" hidden>
+            3
+        </div>
+
+        <div id="panel_ayuda" hidden>
+            4
+        </div>
+
+        <div id="panel_acerca" hidden>
+            5
+        </div>
+
+
+        <footer></footer>    
     </div>
 </body>
 </html>
