@@ -5,11 +5,17 @@
  */
 
 $(document).ready(function() {
-    let tablero_jugador=new Matriz(8,8);
-    let tablero_maquina=new Matriz(8,8);
-    tablero_jugador.fill('J');
-    tablero_maquina.fill('M');
-    console.log('Humano: \n'+tablero_jugador.toString());
-    console.log('Máquina: \n'+tablero_maquina.toString());
+    let tablero_jugador=new Tablero(10,10);
+    tablero_jugador.inicializa(9);
+    // let tablero_maquina=new Tablero(10,10);
+    // tablero_maquina.inicializa(6);
+
+
+    for (let i=0; i<10;i++){
+        console.log(azar(0,4));
+    }
+
+    console.log('Humano: \n'+tablero_jugador.aTexto());
+    // console.log('Máquina: \n'+tablero_maquina.aTexto());
     $.controlador.init("panel_inicio");
 });

@@ -1,0 +1,41 @@
+
+funcion colocarBarco(barco,tablero) {
+
+	var direccion = aleatorio(0..3);
+	var libre=false;
+	
+	repite {
+		switch(direccion):
+		
+			caso 0: // hacia el norte
+				posFil= aleatorio(barco.tam-1..tablero.filas-1)
+				posCol= aleatorio(0..tablero.columnas-1)//fijo
+				libre=mirarNorte(posFil,posCol,tablero,barco)
+				si (libre)
+					colocarNorte(posFil,posCol,tablero,barco)
+				
+			caso 2: // hacia el sur
+				posFil= aleatorio(0..tablero.filas-barco.tam)
+				posCol= aleatorio(0..tablero.columnas-1)//fijo
+				libre=mirarSur(posFil,posCol,tablero,barco)
+				si (libre)
+					colocarSur(posFil,posCol,tablero,barco)			
+				
+			caso 1: // hacia el este
+				posFil= aleatorio(0..tablero.fil-1) //fijo
+				posCol= aleatorio(0..tablero.col-barco.tam)
+				libre=mirarEste(posFil,posCol,tablero,barco)
+				si (libre)
+					colocarEste(posFil,posCol,tablero,barco)
+				
+			caso 3: // hacia el oeste
+				posFil= aleatorio(0..tablero.fil-1) //fijo
+				posCol= aleatorio(barco.tam-1,tablero.col-1)
+				libre=mirarOeste(posFil,posCol,tablero,barco)
+				si (libre)
+					colocarOeste(posFil,posCol,tablero,barco)
+					
+	}hasta(libre)
+				
+}
+
